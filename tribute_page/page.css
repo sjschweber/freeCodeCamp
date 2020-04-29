@@ -1,22 +1,38 @@
-
+body {
+    font-family: -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    color: #333;
+}
 main{
   display: flex;
   flex-direction: column;
   background: #e6e6e6;
-  width: fill;
-  height: 100vh;
-  text-align: center;
+  width: 100vw;
+  height: fill;
+  align-items: center;
 }
-
+ul{
+  max-width: 550px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+  line-height: 1.6;
+}
 .kawhi-image{
-  border: solid;
-  border-width: medium;
-  border-color: #990000;
   height: 400px;
   width: 600px;
 }
 .kawhi-image:hover{
   animation: beat 1s;
+}
+#img-caption{
+  text-align: center;
+}
+#tribute-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes beat{
@@ -27,8 +43,15 @@ main{
     transform: scale( 1.025 )
     }
 }
-#title{
-  font-size: 100px;
-  color: black;
-  text-align: center;
+
+@media (max-width: 601px){
+  .kawhi-image{
+    transform: scale(.75);
+  }
+  .kawhi-image:hover{
+    animation: none;
+  }
+  #title{
+    transform: scale(.75);
+  }
 }
